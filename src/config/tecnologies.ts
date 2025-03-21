@@ -11,6 +11,7 @@ import astro from "../assets/logos/astro.svg";
 import react from "../assets/logos/react.svg";
 import next from "../assets/logos/nextjs.svg";
 import fastapi from "../assets/logos/fastapi.svg";
+import django from "../assets/logos/django.svg";
 
 type Tecnology = {
   logo: ImageMetadata;
@@ -45,6 +46,7 @@ export const tecnologies: Tecnologies[] = [
       { logo: react, logoAlt: "Logo de React", name: "React" },
       { logo: next, logoAlt: "Logo de Next", name: "Next" },
       { logo: fastapi, logoAlt: "Logo de FastAPI", name: "FastAPI" },
+      { logo: django, logoAlt: "Logo de Django", name: "Django" },
     ],
   },
 ];
