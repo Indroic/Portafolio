@@ -1,20 +1,26 @@
 ---
 import { Image } from "astro:assets";
 
-
 type Props = {
-    logo: ImageMetadata;
-    logoAlt: string;
-    name: string;
-}
+  logo: ImageMetadata;
+  logoAlt: string;
+  name: string;
+};
 
-const { logo, logoAlt, name}: Props = Astro.props
-
+const { logo, logoAlt, name }: Props = Astro.props;
 ---
 
-<article class="grid grid-cols-1 content-center items-center gap-2 w-fit font-bold">
-    <section class="p-4 bg-blue-gem-950 w-fit border-2 border-blue-gem-600 rounded-xl shadow shadow-blue-gem-500">
-        <Image src={logo} alt={logoAlt} class="w-8 h-8 min-w-8 min-h-8 md:w-12 md:h-12" />
-    </section>
-    <p class="text-sm">{name}</p>
+<article
+  class="grid grid-cols-1 content-center items-center gap-2 w-fit font-bold"
+>
+  <section
+    class="p-4 bg-blue-gem-950 w-fit border-2 border-blue-gem-600 rounded-xl shadow shadow-blue-gem-500"
+  >
+    <Image
+      src={logo}
+      alt={logoAlt}
+      class="w-8 h-8 min-w-8 min-h-8 md:w-12 md:h-12"
+    />
+  </section>
+  <p class="text-sm">{name}</p>
 </article>

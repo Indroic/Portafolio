@@ -13,38 +13,38 @@ import next from "../assets/logos/nextjs.svg";
 import fastapi from "../assets/logos/fastapi.svg";
 
 type Tecnology = {
-    logo: ImageMetadata;
-    logoAlt: string;
-    name: string;
+  logo: ImageMetadata;
+  logoAlt: string;
+  name: string;
 };
 
 type Tecnologies = {
-    section: string;
-    tecnologies: Tecnology[];
-}
+  section: string;
+  tecnologies: Tecnology[];
+};
 
 export const tecnologies: Tecnologies[] = [
-    {
-        section: "Bases de Datos",
-        tecnologies: [
-            { logo: postgres, logoAlt: "Logo de PostgreSQL", name: "PostgreSQL" },
-        ],
-    },
-    {
-        section: "Lenguajes de Programación",
-        tecnologies: [
-            { logo: python, logoAlt: "Logo de Python", name: "Python" },
-            { logo: js, logoAlt: "Logo de JavaScript", name: "JavaScript" },
-            { logo: ts, logoAlt: "Logo de TypeScript", name: "TypeScript" },
-        ],
-    },
-    {
-        section: "Frameworks",
-        tecnologies: [
-            { logo: astro, logoAlt: "Logo de Astro", name: "Astro" },
-            { logo: react, logoAlt: "Logo de React", name: "React" },
-            { logo: next, logoAlt: "Logo de Next", name: "Next" },
-            { logo: fastapi, logoAlt: "Logo de FastAPI", name: "FastAPI" },
-        ],
-    },
+  {
+    section: "Bases de Datos",
+    tecnologies: [
+      { logo: postgres, logoAlt: "Logo de PostgreSQL", name: "PostgreSQL" },
+    ],
+  },
+  {
+    section: "Lenguajes de Programación",
+    tecnologies: [
+      { logo: python, logoAlt: "Logo de Python", name: "Python" },
+      { logo: js, logoAlt: "Logo de JavaScript", name: "JavaScript" },
+      { logo: ts, logoAlt: "Logo de TypeScript", name: "TypeScript" },
+    ],
+  },
+  {
+    section: "Frameworks",
+    tecnologies: [
+      { logo: astro, logoAlt: "Logo de Astro", name: "Astro" },
+      { logo: react, logoAlt: "Logo de React", name: "React" },
+      { logo: next, logoAlt: "Logo de Next", name: "Next" },
+      { logo: fastapi, logoAlt: "Logo de FastAPI", name: "FastAPI" },
+    ],
+  },
 ];

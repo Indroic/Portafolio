@@ -1,20 +1,35 @@
 ---
-import { Image } from "astro:assets"
+import { Image } from "astro:assets";
 import wave2 from "../../assets/waves/wave-2.svg";
 import paradiseLogo from "../../assets/logos/paradise.webp";
-
 ---
+
 <section id="proyectos" class="grid grid-cols-1 text-center font-bold">
-    <Image src={wave2} alt="wave" class="w-full" />
-    <section class="flex flex-col bg-blue-lagon-950 px-12 md:px-52">
-        <h1><strong class="drop-shadow-blue-lagon-500 text-blue-lagon-500">Projectos</strong> que he Realizado</h1>
+  <Image src={wave2} alt="wave" class="w-full" />
+  <section class="flex flex-col bg-blue-lagon-950 px-12 md:px-52">
+    <h1>
+      <strong class="drop-shadow-blue-lagon-500 text-blue-lagon-500"
+        >Projectos</strong
+      > que he Realizado
+    </h1>
 
-        <h2 class="text-sm">Todos los proyectos de <strong class="drop-shadow-blue-lagon-500 text-blue-lagon-500">Paradise Systems</strong></h2>
-        <article class="flex flex-col items-center gap-3">
-            <a target="_blank" href="https://github.com/paradise-systems" class="items-center">
-                <Image src={paradiseLogo} alt="paradise logo" class=" h-32 w-32 rounded-full" />
-            </a>
-        </article>
-
-    </section>
+    <h2 class="text-sm">
+      Todos los proyectos de <strong
+        class="drop-shadow-blue-lagon-500 text-blue-lagon-500"
+        >Paradise Systems</strong>
+    </h2>
+    <article class="flex flex-col items-center gap-3">
+      <a
+        target="_blank"
+        href="https://github.com/paradise-systems"
+        class="items-center"
+      >
+        <Image
+          src={paradiseLogo}
+          alt="paradise logo"
+          class="h-32 w-32 rounded-full"
+        />
+      </a>
+    </article>
+  </section>
 </section>

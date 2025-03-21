@@ -1,26 +1,30 @@
 ---
-import { Image } from "astro:assets"
-import logo from "../../public/logo.svg"
-import githubLogo from "../assets/logos/github.svg"
+import { Image } from "astro:assets";
+import logo from "../../public/logo.svg";
+import githubLogo from "../assets/logos/github.svg";
 ---
 
 <header class="flex sticky top-0 justify-between px-8 py-3 backdrop-blur-md">
-    <Image src={logo} alt="logo" class="w-8 h-8" />
-    <section class="hidden md:flex gap-5 text-black-pearl-50 flex-row items-center justify-between content-center font-bold text-sm h-full">
-        <a href="#sobre-mi" class="scroll-link">Sobre mi</a>
-        <a href="#tecnologias" class="scroll-link">Tecnologias</a>
-        <a href="#proyectos" class="scroll-link">Proyectos</a>
-    </section>
-    <a target="_blank" href="https://github.com/Indroic"><Image src={githubLogo} class="w-8 h-8 rounded-full" alt={"github"}/></a>
+  <Image src={logo} alt="logo" class="w-8 h-8" />
+  <section
+    class="hidden md:flex gap-5 text-black-pearl-50 flex-row items-center justify-between content-center font-bold text-sm h-full"
+  >
+    <a href="#sobre-mi" class="scroll-link">Sobre mi</a>
+    <a href="#tecnologias" class="scroll-link">Tecnologias</a>
+    <a href="#proyectos" class="scroll-link">Proyectos</a>
+  </section>
+  <a target="_blank" href="https://github.com/Indroic"
+    ><Image src={githubLogo} class="w-8 h-8 rounded-full" alt={"github"} /></a
+  >
 </header>
 
 <script>
-    document.querySelectorAll('.scroll-link').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
+  document.querySelectorAll(".scroll-link").forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute("href")).scrollIntoView({
+        behavior: "smooth",
+      });
     });
+  });
 </script>

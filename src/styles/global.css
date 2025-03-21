@@ -1,92 +1,86 @@
 @import "tailwindcss";
 
 @theme {
-    --color-blue-lagon-50: #e9fffd;
-    --color-blue-lagon-100: #c9fff9;
-    --color-blue-lagon-200: #99fff7;
-    --color-blue-lagon-300: #54fff4;
-    --color-blue-lagon-400: #07fffc;
-    --color-blue-lagon-500: #00e3ef;
-    --color-blue-lagon-600: #00b5c9;
-    --color-blue-lagon-700: #008fa1;
-    --color-blue-lagon-800: #087282;
-    --color-blue-lagon-900: #0c5e6d;
-    --color-blue-lagon-950: #004250;
-    
-    
+  --color-blue-lagon-50: #e9fffd;
+  --color-blue-lagon-100: #c9fff9;
+  --color-blue-lagon-200: #99fff7;
+  --color-blue-lagon-300: #54fff4;
+  --color-blue-lagon-400: #07fffc;
+  --color-blue-lagon-500: #00e3ef;
+  --color-blue-lagon-600: #00b5c9;
+  --color-blue-lagon-700: #008fa1;
+  --color-blue-lagon-800: #087282;
+  --color-blue-lagon-900: #0c5e6d;
+  --color-blue-lagon-950: #004250;
 
-    --color-black-pearl-50: #eff8ff;
-    --color-black-pearl-100: #def0ff;
-    --color-black-pearl-200: #b5e2ff;
-    --color-black-pearl-300: #74cdff;
-    --color-black-pearl-400: #2bb5ff;
-    --color-black-pearl-500: #009bf8;
-    --color-black-pearl-600: #007bd4;
-    --color-black-pearl-700: #0061ac;
-    --color-black-pearl-800: #00538e;
-    --color-black-pearl-900: #054575;
-    --color-black-pearl-950: #02182b;    
-    
-    --color-blue-gem-50: #edf0ff;
-    --color-blue-gem-100: #dee2ff;
-    --color-blue-gem-200: #c4c9ff;
-    --color-blue-gem-300: #a1a5ff;
-    --color-blue-gem-400: #7f7bfe;
-    --color-blue-gem-500: #6a5af8;
-    --color-blue-gem-600: #5d3eed;
-    --color-blue-gem-700: #5131d1;
-    --color-blue-gem-800: #422aa9;
-    --color-blue-gem-900: #382a85;
-    --color-blue-gem-950: #22194d;
+  --color-black-pearl-50: #eff8ff;
+  --color-black-pearl-100: #def0ff;
+  --color-black-pearl-200: #b5e2ff;
+  --color-black-pearl-300: #74cdff;
+  --color-black-pearl-400: #2bb5ff;
+  --color-black-pearl-500: #009bf8;
+  --color-black-pearl-600: #007bd4;
+  --color-black-pearl-700: #0061ac;
+  --color-black-pearl-800: #00538e;
+  --color-black-pearl-900: #054575;
+  --color-black-pearl-950: #02182b;
 
+  --color-blue-gem-50: #edf0ff;
+  --color-blue-gem-100: #dee2ff;
+  --color-blue-gem-200: #c4c9ff;
+  --color-blue-gem-300: #a1a5ff;
+  --color-blue-gem-400: #7f7bfe;
+  --color-blue-gem-500: #6a5af8;
+  --color-blue-gem-600: #5d3eed;
+  --color-blue-gem-700: #5131d1;
+  --color-blue-gem-800: #422aa9;
+  --color-blue-gem-900: #382a85;
+  --color-blue-gem-950: #22194d;
 
-    --drop-shadow-black-pearl-500: 0 0 2px var(--color-black-pearl-500);
-    --drop-shadow-blue-lagon-500: 0 0 2px var(--color-blue-lagon-500);
-
-
-
+  --drop-shadow-black-pearl-500: 0 0 2px var(--color-black-pearl-500);
+  --drop-shadow-blue-lagon-500: 0 0 2px var(--color-blue-lagon-500);
 }
 
 body {
-    @apply bg-black-pearl-950;
-    display: grid;
-    min-height: 100dvh;
-    grid-template-rows: auto 1fr auto;
+  @apply bg-black-pearl-950;
+  display: grid;
+  min-height: 100dvh;
+  grid-template-rows: auto 1fr auto;
 }
 
 .fondo-1 {
-    @apply fixed;
-    top: 0;
-    left: 0;
-    width: 20%;
-    height: 100dvh;
-    z-index: -1;
-    background-image: url('../assets/fondo-1.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
+  @apply fixed;
+  top: 0;
+  left: 0;
+  width: 20%;
+  height: 100dvh;
+  z-index: -1;
+  background-image: url("../assets/fondo-1.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .fondo-2 {
-    @apply fixed;
-    top: 0;
-    right: 0;
-    width: 10%;
-    height: 100dvh;
-    z-index: -1;
-    background-image: url('../assets/fondo-2.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    animation: flotar 4s ease-in-out infinite;
+  @apply fixed;
+  top: 0;
+  right: 0;
+  width: 10%;
+  height: 100dvh;
+  z-index: -1;
+  background-image: url("../assets/fondo-2.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: flotar 4s ease-in-out infinite;
 }
 
-@keyframes flotar{
-    0%{
-        transform: translateY(-1rem);
-    }
-    50%{
-        transform: translateY(1rem);
-    }
-    100%{
-        transform: translateY(-1rem);
-    }
+@keyframes flotar {
+  0% {
+    transform: translateY(-1rem);
+  }
+  50% {
+    transform: translateY(1rem);
+  }
+  100% {
+    transform: translateY(-1rem);
+  }
 }
