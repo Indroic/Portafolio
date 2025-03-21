@@ -76,4 +76,17 @@ body {
     background-image: url('../assets/fondo-2.svg');
     background-repeat: no-repeat;
     background-size: cover;
+    animation: flotar 4s ease-in-out infinite;
+}
+
+@keyframes flotar{
+    0%{
+        transform: translateY(-1rem);
+    }
+    50%{
+        transform: translateY(1rem);
+    }
+    100%{
+        transform: translateY(-1rem);
+    }
 }
