@@ -1,0 +1,16 @@
+---
+import { Image } from "astro:assets";
+import wave1 from "../../assets/waves/wave-1.svg";
+import wave2 from "../../assets/waves/wave-1-inverted.svg";
+---
+<section id="sobre-mi" class="flex flex-col grid-cols-1 gap-0 font-bold text-blue-lagon-50">
+    <Image src={wave1} alt="wave" class="w-full" />
+    <section class="flex flex-col gap-3 bg-blue-lagon-950 px-12 md:px-52 h-full">
+        <h2 class="text-md">Hola, hablemos un poco</h2>
+        <h1 class="text-xl drop-shadow-blue-lagon-500 text-blue-lagon-500">Sobre mi</h1>
+        <p class="font-bold text-sm">
+            Hola, soy David Latosefki, un desarrollador full stack, tengo 17 años de edad y resido en Maracaibo, Venezuela. Bienvenido a mi portafolio, en este se observará un resumen de mi trayectoria como programador, explicando distintos aspectos acerca de mis conocimientos en las áreas de programación.
+        </p>
+    </section>
+    <Image src={wave2} alt="wave" class="w-full" />
+</section>
