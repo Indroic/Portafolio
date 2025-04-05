@@ -19,12 +19,23 @@ import githubLogo from "../assets/logos/github.svg";
 </header>
 
 <script>
-  document.querySelectorAll(".scroll-link").forEach((anchor) => {
-    anchor.addEventListener("click", function (e) {
-      e.preventDefault();
-      document.querySelector(this.getAttribute("href")).scrollIntoView({
-        behavior: "smooth",
-      });
+  // Selecciona todos los enlaces con la clase "scroll-link"
+  const scrollLinks = document.querySelectorAll<HTMLAnchorElement>(".scroll-link");
+
+  // Agrega un evento de clic a cada enlace
+  scrollLinks.forEach((anchor) => {
+    anchor.addEventListener("click", (event: MouseEvent) => {
+      event.preventDefault(); // Evita el comportamiento predeterminado del enlace
+
+      // Obtiene el destino del enlace a través del atributo "href"
+      const targetId = anchor.getAttribute("href");
+      if (targetId) {
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          // Desplaza suavemente hacia el elemento objetivo
+          targetElement.scrollIntoView({ behavior: "smooth" });
+        }
+      }
     });
   });
 </script>

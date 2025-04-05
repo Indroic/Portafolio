@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import wave1 from "../../assets/waves/wave-1.svg";
 import wave2 from "../../assets/waves/wave-1-inverted.svg";
+import yo from "../../assets/yo.avif";
 ---
 
 <section
@@ -9,24 +10,27 @@ import wave2 from "../../assets/waves/wave-1-inverted.svg";
   class="flex flex-col grid-cols-1 gap-0 font-bold text-blue-lagon-50"
 >
   <Image src={wave1} alt="wave" class="w-full" />
-  <section class="flex flex-col gap-3 bg-blue-lagon-950 px-12 md:px-52 h-full">
-    <h2 class="text-md">Hola, hablemos un poco</h2>
-    <h1 class="text-xl drop-shadow-blue-lagon-500 text-blue-lagon-500">
-      Sobre mi
-    </h1>
-    <p class="font-bold text-sm">
-      Hola, soy David Latosefki, un desarrollador full stack. Tengo 17 años de
-      edad y resido en Maracaibo, Venezuela, desde mis 12 años he aprendido a
-      programar, mediante vídeos de tutoriales, libros y artículos, por lo que
-      mi aprendizaje ha sido totalmente autónomo, actualmente estudio segundo
-      semestre de Ingeniería en Sistemas, ya que decidí especializarme de manera
-      profesional en esta área; además de mis conocimientos en programación, sé
-      sobre el manejo y estructura de aparatos electrónicos, ya que la
-      computación y electrónica son un hobby que igualmente disfruto. Bienvenido
-      a mi portafolio, en este se observará un resumen de mi trayectoria como
-      programador, explicando distintos aspectos acerca de mis conocimientos en
-      las áreas de programación.
-    </p>
+  <section class="flex flex-row gap-3 bg-blue-lagon-950 px-12 md:px-52 h-full">
+    <section>
+      <h2 class="text-md">Hola, hablemos un poco</h2>
+      <h1 class="text-xl drop-shadow-blue-lagon-500 text-blue-lagon-500">
+        Sobre mi
+      </h1>
+      <p class="font-bold text-sm">
+        Hola, soy David Latosefki, un desarrollador full stack. Tengo 17 años de
+        edad y resido en Maracaibo, Venezuela, desde mis 12 años he aprendido a
+        programar, mediante vídeos de tutoriales, libros y artículos, por lo que
+        mi aprendizaje ha sido totalmente autónomo, actualmente estudio segundo
+        semestre de Ingeniería en Sistemas, ya que decidí especializarme de manera
+        profesional en esta área; además de mis conocimientos en programación, sé
+        sobre el manejo y estructura de aparatos electrónicos, ya que la
+        computación y electrónica son un hobby que igualmente disfruto. Bienvenido
+        a mi portafolio, en este se observará un resumen de mi trayectoria como
+        programador, explicando distintos aspectos acerca de mis conocimientos en
+        las áreas de programación.
+      </p>
+    </section>
+    <Image src={yo} alt="yo" class="w-1/2 md:w-1/4 rounded-full" />
   </section>
   <Image src={wave2} alt="wave" class="w-full" />
 </section>
