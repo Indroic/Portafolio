@@ -1,7 +1,12 @@
 ---
 import { Image } from "astro:assets";
-import logo from "../../public/logo.svg";
-import githubLogo from "../assets/logos/github.svg";
+import logo from "@/logo.svg";
+import githubLogo from "@/assets/logos/github.svg";
+import LangSelector from "./LangSelector";
+import type { TranslateType } from "@/i18n";
+
+const { translation, currentLang }: { translation?: TranslateType; currentLang?: string } = Astro.props;
+
 ---
 
 <header class="flex sticky top-0 justify-between px-8 py-3 backdrop-blur-md">
@@ -9,13 +14,16 @@ import githubLogo from "../assets/logos/github.svg";
   <section
     class="hidden md:flex gap-5 text-black-pearl-50 flex-row items-center justify-between content-center font-bold text-sm h-full"
   >
-    <a href="#sobre-mi" class="scroll-link">Sobre mi</a>
-    <a href="#tecnologias" class="scroll-link">Tecnologias</a>
-    <a href="#proyectos" class="scroll-link">Proyectos</a>
+    <a href="#sobre-mi" class="scroll-link">{translation?.about.aboutMe}</a>
+    <a href="#tecnologias" class="scroll-link">{translation?.technologies.technologies}</a>
+    <a href="#proyectos" class="scroll-link">{translation?.projects.projects}</a>
   </section>
-  <a target="_blank" href="https://github.com/Indroic"
+  <section class="flex flex-row items-center gap-3">
+    <LangSelector currentLang={currentLang} client:only="react" />
+    <a target="_blank" href="https://github.com/Indroic"
     ><Image src={githubLogo} class="w-8 h-8 rounded-full" alt={"github"} /></a
   >
+  </section>
 </header>
 
 <script>

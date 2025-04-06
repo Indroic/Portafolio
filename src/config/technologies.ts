@@ -13,6 +13,9 @@ import next from "../assets/logos/nextjs.svg";
 import fastapi from "../assets/logos/fastapi.svg";
 import django from "../assets/logos/django.svg";
 
+
+import type { TranslateType } from "../i18n";
+
 type Tecnology = {
   logo: ImageMetadata;
   logoAlt: string;
@@ -20,19 +23,19 @@ type Tecnology = {
 };
 
 type Tecnologies = {
-  section: string;
+  section: (translate: TranslateType) => string;
   tecnologies: Tecnology[];
 };
 
 export const tecnologies: Tecnologies[] = [
   {
-    section: "Bases de Datos",
+    section: (translate) => translate.technologies.dataBases,
     tecnologies: [
       { logo: postgres, logoAlt: "Logo de PostgreSQL", name: "PostgreSQL" },
     ],
   },
   {
-    section: "Lenguajes de Programación",
+    section: (translate) => translate.technologies.languages,
     tecnologies: [
       { logo: python, logoAlt: "Logo de Python", name: "Python" },
       { logo: js, logoAlt: "Logo de JavaScript", name: "JavaScript" },
@@ -40,7 +43,7 @@ export const tecnologies: Tecnologies[] = [
     ],
   },
   {
-    section: "Frameworks",
+    section: (translate) => translate.technologies.frameworks,
     tecnologies: [
       { logo: astro, logoAlt: "Logo de Astro", name: "Astro" },
       { logo: react, logoAlt: "Logo de React", name: "React" },

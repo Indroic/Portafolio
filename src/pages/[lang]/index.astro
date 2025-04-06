@@ -1,0 +1,27 @@
+---
+import Header from "@/components/Header.astro";
+import Portafolio from "@/components/Portafolio.astro";
+import Footer from "@/components/Footer.astro";
+import Layout from "@/layouts/Layout.astro";
+import translate from "@translate";
+import type { TranslateType } from "@/i18n";
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: "en" } },
+    { params: { lang: "es" } },
+    { params: { lang: "fr" } }, // Agrega más idiomas si es necesario
+  ];
+}
+
+const { lang } = Astro.params as { lang: keyof typeof translate };
+
+const translation: TranslateType = lang ? translate[lang] : translate.en;
+
+---
+
+<Layout>
+  <Header translation={translation} currentLang={lang} />
+  <Portafolio translation={translation} />
+  <Footer translation={translation} />
+</Layout>

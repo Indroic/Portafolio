@@ -1,7 +1,10 @@
 ---
 import { Image } from "astro:assets";
-import wave2 from "../../assets/waves/wave-1.svg";
-import paradiseLogo from "../../assets/logos/paradise.webp";
+import wave2 from "@/assets/waves/wave-1.svg";
+import paradiseLogo from "@/assets/logos/paradise.webp";
+import type { TranslateType } from "@/i18n";
+
+const { translation }: { translation?: TranslateType } = Astro.props;
 ---
 
 <section id="proyectos" class="flex flex-col grid-cols-1 gap-0 text-center font-bold">
@@ -9,12 +12,12 @@ import paradiseLogo from "../../assets/logos/paradise.webp";
   <section class="flex flex-col bg-blue-lagon-950 py-12 px-12 md:px-52">
     <h1 class="text-blue-lagon-50">
       <strong class="drop-shadow-blue-lagon-500 text-blue-lagon-500"
-        >Projectos</strong
-      > que he Realizado:
+        >{translation?.projects.projects}</strong
+      > {translation?.projects.iRealized}:
     </h1>
     <section class="flex flex-col gap-2">
       <h2 class="text-sm">
-        Todos los proyectos de <strong
+        {translation?.projects.description} <strong
           class="drop-shadow-blue-lagon-500 text-blue-lagon-500"
           >Paradise Systems</strong
         >

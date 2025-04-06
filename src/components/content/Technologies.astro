@@ -1,6 +1,9 @@
 ---
-import Tecnology from "../Tecnology.astro";
-import { tecnologies } from "../../config/tecnologies";
+import Tecnology from "@/components/Technology.astro";
+import { tecnologies } from "@/config/technologies.ts";
+
+const { translation } = Astro.props;
+
 ---
 
 <section
@@ -8,14 +11,14 @@ import { tecnologies } from "../../config/tecnologies";
   class="text-black-pearl-50 grid grid-cols-1 items-center text-center px-12 md:px-52 gap-5"
 >
   <h1 class="text-xl font-bold">
-    ¿Que <strong class="drop-shadow-black-pearl-500 text-black-pearl-500"
-      >Tecnologias</strong
-    > suelo utilizar?
+    {translation?.technologies.what} <strong class="drop-shadow-black-pearl-500 text-black-pearl-500"
+      >{translation?.technologies.technologies}</strong
+    > {translation?.technologies.iUse}
   </h1>
   {
     tecnologies.map((section) => (
       <section class="flex flex-col gap-3">
-        <h1 class="text-md font-bold">{section.section}</h1>
+        <h1 class="text-md font-bold">{section.section(translation)}</h1>
         <section class="flex flex-wrap items-center justify-center overflow-x-auto gap-3">
           {section.tecnologies.map((tecnology) => (
             <Tecnology
