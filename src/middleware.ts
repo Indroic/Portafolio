@@ -9,9 +9,9 @@ export const onRequest = defineMiddleware((context, next) => {
     if (!path.match(/^\/[a-z]{2}(\/|$)/)) {
         // Redirigir agregando el idioma predeterminado al final de la ruta
         const newPath = path.endsWith("/")
-            ? `${path}${defaultLang}`
+            ? `${path}${defaultLang}/`
             : `${path}/${defaultLang}`;
-        return context.redirect(newPath);
+        return context.redirect(new URL(newPath, context.url.origin).toString());
     }
 
     return next();
