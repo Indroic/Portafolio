@@ -17,9 +17,9 @@ export default function LangSelector({ currentLang }: { currentLang?: string }) 
       setSelectedLang(newLang);
 
       // Obtener la ruta actual sin el prefijo del idioma
-      const currentPath = window.location.pathname.replace(/^\/[a-z]{2}/, "");
+      const currentPath = window.location.pathname.replace(/^\/[a-z]{2}(\/|$)/, "/");
       // Redirigir a la nueva ruta con el idioma seleccionado
-      window.location.href = `${currentPath}/${newLang}`;
+      window.location.href = `/${newLang}${currentPath}`;
     }
   };
 
