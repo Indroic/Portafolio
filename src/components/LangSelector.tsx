@@ -16,10 +16,16 @@ export default function LangSelector({ currentLang }: { currentLang?: string }) 
     if (newLang !== selectedLang) {
       setSelectedLang(newLang);
 
-      // Obtener la ruta actual sin el prefijo del idioma
-      const currentPath = window.location.pathname.replace(/^\/[a-z]{2}(\/|$)/, "/");
-      // Redirigir a la nueva ruta con el idioma seleccionado
-      window.location.href = `/${newLang}${currentPath}`;
+      // Obtener la ruta actual
+      const currentPath = window.location.pathname;
+
+      // Verificar si la ruta ya tiene un prefijo de idioma
+      const newPath = currentPath.match(/\/[a-z]{2}(\/|$)/)
+        ? currentPath.replace(/\/[a-z]{2}(\/|$)/, `/${newLang}/`) // Reemplazar el idioma existente
+        : `${currentPath.replace(/\/$/, "")}/${newLang}`; // Agregar el idioma al final si no existe
+
+      // Redirigir a la nueva ruta
+      window.location.href = newPath;
     }
   };
 
