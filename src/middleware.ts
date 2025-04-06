@@ -3,15 +3,10 @@ import translate from "@translate";
 
 export const onRequest = defineMiddleware((context, next) => {
     const defaultLang = Object.keys(translate)[0]; // Idioma predeterminado (por ejemplo, "en")
-    const path = context.url.pathname;
-
-    // Verificar si la ruta no tiene un prefijo de idioma
-    if (!path.match(/^\/[a-z]{2}(\/|$)/)) {
-        // Redirigir agregando el idioma predeterminado al final de la ruta
-        const newPath = path.endsWith("/")
-            ? `${path}${defaultLang}/`
-            : `${path}/${defaultLang}`;
-        return context.redirect(new URL(newPath, context.url.origin).toString());
+    console.log(context.url.pathname.split("/"))
+    console.log(context.url.pathname.split("/").length)
+    if (context.url.pathname.split("/")[1] === '') {
+        return context.redirect(`/${defaultLang}`);
     }
 
     return next();
