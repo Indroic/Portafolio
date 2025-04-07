@@ -5,7 +5,21 @@ import githubLogo from "@/assets/logos/github.svg"; // Asegúrate de que este ar
 import LangSelector from "./LangSelector";
 import type { TranslateType } from "@/i18n";
 
+interface NavigationLink {
+  href: string;
+  label?: string;
+  target?: string;
+}
+
 const { translation, currentLang }: { translation?: TranslateType; currentLang?: string } = Astro.props;
+
+const navigationLinks: NavigationLink[] = [
+  { href: "#sobre-mi", label: translation?.about.aboutMe },
+  { href: "#tecnologias", label: translation?.technologies.technologies },
+  { href: "#proyectos", label: translation?.projects.projects },
+  { href: "https://www.linkedin.com/in/indroic/", label: "LinkedIn", target: "_blank" },
+];
+
 
 ---
 
@@ -14,15 +28,18 @@ const { translation, currentLang }: { translation?: TranslateType; currentLang?:
   <section
     class="hidden md:flex gap-5 text-black-pearl-50 flex-row items-center justify-between content-center font-bold text-sm h-full"
   >
-    <a href="#sobre-mi" class="scroll-link">{translation?.about.aboutMe}</a>
-    <a href="#tecnologias" class="scroll-link">{translation?.technologies.technologies}</a>
-    <a href="#proyectos" class="scroll-link">{translation?.projects.projects}</a>
-    <a target="_blank" href="https://www.linkedin.com/in/indroic/">LinkedIn</a>
+    {navigationLinks.map((link) => (
+      <a href={link.href} class="scroll-link hover:text-black-pearl-300 hover:shadow-black-pearl-500 hover:drop-shadow-black-pearl-500  transition-all">
+        {link.label}
+      </a>
+    ))}
   </section>
-  <section class="flex flex-row items-center gap-3">
+  <section class="flex flex-row items-center gap-3 text-black-pearl-50">
+    <a target="_blank" href="https://www.linkedin.com/in/indroic/" class="visible md:hidden ">LinkedIn</a>
     <LangSelector currentLang={currentLang} client:only="react" />
     <a target="_blank" href="https://github.com/Indroic"
-    ><Image src={githubLogo} class="w-8 h-8 rounded-full" alt={"github"} /></a
+    >
+    <Image src={githubLogo} class="w-8 h-8 rounded-full" alt={"github"} /></a
   >
   </section>
 </header>

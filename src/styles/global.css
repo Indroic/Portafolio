@@ -84,3 +84,11 @@ body {
     transform: translateY(-1rem);
   }
 }
+
+
+.wave{
+  @apply w-full;
+  background-repeat: no-repeat;
+  background-size: cover;
+  bottom: 0;
+}
