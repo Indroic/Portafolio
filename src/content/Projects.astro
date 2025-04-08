@@ -8,8 +8,8 @@ const { translation }: { translation?: TranslateType } = Astro.props;
 ---
 
 <section id="proyectos" class="flex flex-col grid-cols-1 gap-0 text-center font-bold">
-  <Image src={wave2} alt="wave" class="wave" />
-  <section class="flex flex-col bg-blue-lagon-950 py-12 px-12 md:px-52">
+  <Image src={wave2} alt="wave" class="wave opacity-50" />
+  <section class="flex flex-col bg-blue-lagon-950/50 py-12 px-12 md:px-52">
     <h1 class="text-blue-lagon-50">
       <strong class="drop-shadow-blue-lagon-500 text-blue-lagon-500"
         >{translation?.projects.projects}</strong
