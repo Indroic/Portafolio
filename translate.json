@@ -3,15 +3,14 @@
         "name": "David Latosefki",
         "title": "Portafolio Personal",
         "welcome": {
-            "developer": "Desarrollador",
-            "fullStack": "Full-Stack",
+            "juniorFullStackDeveloper": ["Desarrollador", "Junior Full-Stack"],
             "helloI": "Hola, soy",
             "helloIAm": "Hola, soy un",
-            "aDeveloper": "un desarrollador full-stack"
+            "aDeveloper": "un desarrollador full-stack junior"
         },
         "about": {
             "aboutMe": "Sobre mí",
-            "description": "¡Hola! Soy David Latosefki, un desarrollador full-stack con 18 años. Vivo en Maracaibo, Venezuela, y desde los 12 años la programación se convirtió en una pasión que he cultivado de forma autodidacta a través de videos, libros y artículos. Actualmente, estoy cursando el segundo semestre de Ingeniería en Sistemas, buscando profesionalizar esta área que tanto me atrae. Además de programar, disfruto mucho entender cómo funcionan los aparatos electrónicos; la computación y la electrónica son hobbies que realmente me encantan. Este es mi portafolio, donde comparto un resumen de mi camino como programador y detallo mis conocimientos en las diversas áreas de la programación. ¡Espero que te interese conocer mi trabajo!"
+            "description": "¡Hola! Soy David Latosefki, un desarrollador full-stack junior con 18 años. Vivo en Maracaibo, Venezuela, y desde los 12 años la programación se convirtió en una pasión que he cultivado de forma autodidacta a través de videos, libros y artículos. Actualmente, estoy cursando el segundo semestre de Ingeniería en Sistemas, buscando profesionalizar esta área que tanto me atrae. Además de programar, disfruto mucho entender cómo funcionan los aparatos electrónicos; la computación y la electrónica son hobbies que realmente me encantan. Este es mi portafolio, donde comparto un resumen de mi camino como programador y detallo mis conocimientos en las diversas áreas de la programación. ¡Espero que te interese conocer mi trabajo!"
         },
         "technologies": {
             "what": "¿Qué",
@@ -31,15 +30,14 @@
         "name": "David Latosefki",
         "title": "Personal Portfolio",
         "welcome": {
-            "developer": "Developer",
-            "fullStack": "Full-Stack",
+            "juniorFullStackDeveloper": ["Developer", "Junior Full-Stack"],
             "helloI": "Hello, I'm",
             "helloIAm": "Hello, I'm a",
-            "aDeveloper": "a full-stack developer"
+            "aDeveloper": "a junior full-stack developer"
         },
         "about": {
             "aboutMe": "About Me",
-            "description": "Hello! I'm David Latosefki, a 18-year-old full-stack developer. I live in Maracaibo, Venezuela, and since I was 12, programming has become a passion that I've cultivated self-taught through videos, books, and articles. Currently, I'm in my second semester of Systems Engineering, seeking to professionalize this area that attracts me so much. Besides programming, I really enjoy understanding how electronic devices work; computing and electronics are hobbies that I truly love. This is my portfolio, where I share a summary of my journey as a programmer and detail my knowledge in the various areas of programming. I hope you find my work interesting!"
+            "description": "Hello! I'm David Latosefki, a 18-year-old junior full-stack developer. I live in Maracaibo, Venezuela, and since I was 12, programming has become a passion that I've cultivated self-taught through videos, books, and articles. Currently, I'm in my second semester of Systems Engineering, seeking to professionalize this area that attracts me so much. Besides programming, I really enjoy understanding how electronic devices work; computing and electronics are hobbies that I truly love. This is my portfolio, where I share a summary of my journey as a programmer and detail my knowledge in the various areas of programming. I hope you find my work interesting!"
         },
         "technologies": {
             "what": "What",

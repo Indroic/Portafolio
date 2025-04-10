@@ -27,8 +27,7 @@ interface About {
 }
 
 interface Welcome {
-  developer: string;
-  fullStack: string;
+  juniorFullStackDeveloper: [string, string]; 
   helloI: string;
   helloIAm: string;
   aDeveloper: string;
