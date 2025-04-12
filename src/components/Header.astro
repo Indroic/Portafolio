@@ -23,8 +23,8 @@ const navigationLinks: NavigationLink[] = [
 
 ---
 
-<header class="flex sticky top-0 justify-between px-8 py-3 backdrop-blur-md z-20">
-  <Image src={logo} alt="logo" class="w-8 h-8" />
+<header class="flex sticky top-0 justify-between px-8 py-3 backdrop-blur-md z-20 aspect-auto">
+  <Image src={logo} alt="logo" class="w-8 h-8 aspect-square" />
   <section
     class="hidden md:flex gap-5 text-black-pearl-50 flex-row items-center justify-between content-center font-bold text-sm h-full"
   >
@@ -34,11 +34,10 @@ const navigationLinks: NavigationLink[] = [
       </a>
     ))}
   </section>
-  <section class="flex flex-row items-center gap-3 text-black-pearl-50">
+  <section class="flex flex-row items-center gap-3 text-black-pearl-50 aspect-9/2">
     <a target="_blank" href="https://www.linkedin.com/in/indroic/" class="visible md:hidden ">LinkedIn</a>
     <LangSelector currentLang={currentLang} client:only="react" />
-    <a target="_blank" href="https://github.com/Indroic"
-    >
+    <a target="_blank" href="https://github.com/Indroic" class="flex items-center aspect-square">
     <Image src={githubLogo} class="w-8 h-8 rounded-full" alt={"github"} /></a
   >
   </section>

@@ -12,19 +12,19 @@ const { translation }: { translation?: TranslateType } = Astro.props;
   id="sobre-mi"
   class="flex flex-col grid-cols-1 gap-0 font-bold text-blue-lagon-50"
 >
-  <Image src={wave1} alt="wave" class="wave opacity-50" />
+  <Image src={wave1} alt="wave" class="wave opacity-50 aspect-7.5/2" />
   <section
     class="flex flex-col xl:flex-row gap-3 items-center bg-blue-lagon-950/50 px-12 md:px-52 h-full"
   >
     <section class="flex flex-col gap-3">
-      <h1 class="text-xl drop-shadow-blue-lagon-500 text-blue-lagon-500">
+      <h1 class="text-xl drop-shadow-blue-lagon-500 text-blue-lagon-500 aspect-auto">
         {translation?.about.aboutMe}
       </h1>
-      <p class="font-bold text-sm">
+      <p class="font-bold text-sm aspect-auto">
         {translation?.about.description}
       </p>
     </section>
-    <Image src={yo} alt="yo" class="w-1/2 xl:w-1/4 rounded-full" />
+    <Image src={yo} alt="yo" class="w-1/2 xl:w-1/4 rounded-full aspect-square" />
   </section>
-  <Image src={wave2} alt="wave" class="wave opacity-50" />
+  <Image src={wave2} alt="wave" class="wave opacity-50 aspect-7.5/2" />
 </section>

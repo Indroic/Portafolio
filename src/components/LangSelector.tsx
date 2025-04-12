@@ -31,7 +31,7 @@ export default function LangSelector({ currentLang }: { currentLang?: string }) 
 
   return (
     <select
-      className="border rounded px-2 py-1 text-black-pearl-50 border-transparent"
+      className="border rounded px-2 py-1 text-black-pearl-50 border-transparent aspect-auto"
       value={selectedLang}
       onChange={handleLanguageChange}
     >

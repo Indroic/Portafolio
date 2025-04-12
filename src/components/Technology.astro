@@ -11,7 +11,7 @@ const { logo, logoAlt, name }: Props = Astro.props;
 ---
 
 <article
-  class="grid grid-cols-1 content-center items-center gap-2 w-fit font-bold"
+  class="grid grid-cols-1 content-center items-center gap-2 w-fit font-bold aspect-auto"
 >
   <section
     class="p-4 bg-blue-gem-950 w-fit border-2 border-blue-gem-600 rounded-xl shadow shadow-blue-gem-500"
@@ -19,7 +19,7 @@ const { logo, logoAlt, name }: Props = Astro.props;
     <Image
       src={logo}
       alt={logoAlt}
-      class="w-8 h-8 min-w-8 min-h-8 md:w-12 md:h-12"
+      class="w-8 h-8 min-w-8 min-h-8 md:w-12 md:h-12 aspect-square"
     />
   </section>
   <p class="text-sm">{name}</p>
