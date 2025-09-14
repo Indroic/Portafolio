@@ -7,11 +7,11 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://indroic.me/portafolio', // Cambia esto a la URL de tu sitio
+  site: 'https://indroic.me/portafolio/', // URL de tu sitio en GitHub Pages
+  base: '/portafolio/', // Subdirectorio del repo
+  output: 'static',
   vite: {
     plugins: [tailwindcss()],
   },
-
   integrations: [react()],
-  output: 'static',
 });
